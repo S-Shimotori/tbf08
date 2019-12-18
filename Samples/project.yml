@@ -1,0 +1,21 @@
+name: Samples
+options:
+    bundleIdPrefix: com.example
+targetTemplates:
+    SampleApplication:
+        type: application
+        platform: iOS
+        deploymentTarget: "13.0"
+        sources:
+            - path: Assets.xcassets
+              type: folder
+            - path: LaunchScreen.storyboard
+              type: file
+        settings:
+            INFOPLIST_FILE: info.plist
+targets:
+    TwoWindows:
+        templates:
+            - SampleApplication
+        sources:
+            - TwoWindows
